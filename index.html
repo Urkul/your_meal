@@ -18,6 +18,9 @@
     <link rel="preload" href="fonts/nunito-v26-cyrillic_latin-regular.woff2" as="font" crossorigin>
 
     <link rel="stylesheet" href="css/index.css">
+
+    <script type="module" src="js/index.js"></script>
+
 </head>
 <body>
     
@@ -44,31 +47,58 @@
             <div class="container navigation__container">
                 <ul class="navigation__list">
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_burger navigation__button_active">Бургеры</button>
+                        <button 
+                            class="navigation__button navigation__button_burger navigation__button_active"
+                            data-category="burger"
+                        >Бургеры</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_snack">Закуски</button>
+                        <button 
+                            class="navigation__button navigation__button_snack"
+                            data-category="snack"
+                        >Закуски</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_hot-dog">Хот-доги</button>
+                        <button
+                            class="navigation__button navigation__button_hot-dog"
+                            data-category="hot-dog"
+                        >Хот-доги</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_combo">Комбо</button>
+                        <button 
+                            class="navigation__button navigation__button_combo"
+                            data-category="combo"
+                        >Комбо</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_shawarma">Шаурма</button>
+                        <button 
+                            class="navigation__button navigation__button_shawarma"
+                            data-category="shawarma"
+                        >Шаурма</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_pizza">Пицца</button>
+                        <button 
+                            class="navigation__button navigation__button_pizza"
+                            data-category="pizza"
+                        >Пицца</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_wok">Вок</button>
+                        <button 
+                            class="navigation__button navigation__button_wok"
+                            data-category="wok"
+                        >Вок</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_dessert">Десерты</button>
+                        <button 
+                            class="navigation__button navigation__button_dessert"
+                            data-category="dessert"
+                        >Десерты</button>
                     </li>
                     <li class="navigation__item">
-                        <button class="navigation__button navigation__button_sauce">Соусы</button>
+                        <button 
+                            class="navigation__button navigation__button_sauce"
+                            data-category="sauce"
+                        >Соусы</button>
                     </li>
                 </ul>
             </div>
@@ -82,12 +112,12 @@
                         <div class="order__wrap-title" tabindex="0" role="button">
                             <h2 class="order__title">Корзина</h2>
 
-                            <span class="order__count">4</span>
+                            <span class="order__count">0</span>
                         </div>
 
                         <div class="order__wrap_list">
                             <ul class="order__list">
-                                <li class="order__item">
+                                <!-- <li class="order__item">
                                     <img class="order__image" src="./img/burger_super-cheesy.jpg" alt="burger_super-cheesy">
 
                                     <div class="order__product">
@@ -143,13 +173,13 @@
                                         <p class="count__amount">1</p>
                                         <button class="count__plus">+</button>
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
 
                             <div class="order__total">
                                 <p>Итого</p>
                                 <p>
-                                    <span class="order__total-amount">1279</span>
+                                    <span class="order__total-amount">0</span>
                                     <span class="currency">₴</span>
                                 </p>
                             </div>
@@ -169,9 +199,11 @@
 
                     <div class="catalog__wrap_list">
                         <ul class="catalog__list">
-                            <li class="catalog__item">
+                            <!-- <li class="catalog__item">
                                 <article class="product">
-                                    <img src="./img/burger_meat-bomb.jpg" alt="burger_meat-bomb" class="product__image">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/burger_meat-bomb.jpg" alt="burger_meat-bomb" class="product__image">
+                                    </div>
 
                                     <p class="product__price">689<span class="currency">₴</span></p>
 
@@ -186,7 +218,9 @@
                             </li>
                             <li class="catalog__item">
                                 <article class="product">
-                                    <img src="./img/burger_super-cheesy.jpg" alt="burger_super-cheesy" class="product__image">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/burger_super-cheesy.jpg" alt="burger_super-cheesy" class="product__image">
+                                    </div>
 
                                     <p class="product__price">550<span class="currency">₴</span></p>
 
@@ -201,7 +235,9 @@
                             </li>
                             <li class="catalog__item">
                                 <article class="product">
-                                    <img src="./img/burger_satisfying.jpg" alt="burger_satisfying" class="product__image">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/burger_satisfying.jpg" alt="burger_satisfying" class="product__image">
+                                    </div>
 
                                     <p class="product__price">639<span class="currency">₴</span></p>
 
@@ -216,7 +252,9 @@
                             </li>
                             <li class="catalog__item">
                                 <article class="product">
-                                    <img src="./img/burger_heavy-blow.jpg" alt="burger_heavy-blow" class="product__image">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/burger_heavy-blow.jpg" alt="burger_heavy-blow" class="product__image">
+                                    </div>
 
                                     <p class="product__price">480<span class="currency">₴</span></p>
 
@@ -231,7 +269,9 @@
                             </li>
                             <li class="catalog__item">
                                 <article class="product">
-                                    <img src="./img/burger_timeless-classic.jpg" alt="burger_timeless-classic" class="product__image">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/burger_timeless-classic.jpg" alt="burger_timeless-classic" class="product__image">
+                                    </div>
 
                                     <p class="product__price">450<span class="currency">₴</span></p>
 
@@ -246,7 +286,9 @@
                             </li>
                             <li class="catalog__item">
                                 <article class="product">
-                                    <img src="./img/burger_italian.jpg" alt="burger_italian" class="product__image">
+                                    <div class="product__image-wrapper">
+                                        <img src="./img/burger_italian.jpg" alt="burger_italian" class="product__image">
+                                    </div>
 
                                     <p class="product__price">560<span class="currency">₴</span></p>
 
@@ -258,7 +300,7 @@
 
                                     <button class="product__add" type="button">Добавить</button>
                                 </article>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -360,7 +402,8 @@
                         </div>
                     </div>
 
-                    <p class="modal-product__price">689
+                    <p class="modal-product__price">
+                        <span class="modal-product__price-count">689</span>
                         <span class="currency">₴</span>
                     </p>
                 </div>
@@ -376,7 +419,7 @@
         </div>
     </div>
     
-    <div class="modal modal_delivery">
+    <div class="modal modal_delivery ">
         <div class="modal__main modal-delivery">
             <div class="modal-delivery__container">
                 <h2 class="modal-delivery__title">Доставка</h2>
@@ -419,11 +462,11 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         document.querySelector('.order__wrap-title').addEventListener('click', () => {
             document.querySelector('.order').classList.toggle('order_open');
         });
-    </script>
+    </script> -->
 
 </body>
 </html>

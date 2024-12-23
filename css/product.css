@@ -6,14 +6,42 @@
     border-radius: 12px;
     min-height: 243px;
     position: relative;
+
+    transition: .3s;
+
+    /* overflow: hidden; */
+}
+
+.product:hover {
+    box-shadow: 0px 0px 10px rgba(207, 121, 8, 0.707);
+    /* transition: .3s; */
+}
+
+.product__image-wrapper {
+    overflow: hidden;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .product__image {
     width: 100%;
     height: 120px;
-    object-fit: cover;
+    /* object-fit: cover; */
     border-radius: 8px;
     margin-bottom: 10px;
+
+    /* transform: scale(1.1); */
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.product__image:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .product__price {
@@ -109,6 +137,13 @@
         box-shadow: 0px 0px 10px rgba(207, 121, 8, 0.707);
         /* transition: .3s; */
     }
+
+
+    .product__image-wrapper {
+        height: 220px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+    }    
     
     .product__image {
         height: 220px;
