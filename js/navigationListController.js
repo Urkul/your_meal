@@ -1,4 +1,5 @@
 import { catalogTitle, navigationList, navigationListItems } from "./elements.js"
+import { renderListProduct } from "./renderListProduct.js";
 
 // export const navigationListController = () => {
 //     navigationList.addEventListener('click', e => {
@@ -18,7 +19,7 @@ import { catalogTitle, navigationList, navigationListItems } from "./elements.js
 //     });
 // }
 
-export const navigationListController = (cb) => {
+export const navigationListController = () => {
     // let activeBtn = navigationList.querySelector('.navigation__button_active');
     navigationList.addEventListener('click', e => {
         const categoryItem = e.target.closest('.navigation__button');
@@ -34,7 +35,7 @@ export const navigationListController = (cb) => {
             if (item === categoryItem) {
                 item.classList.add('navigation__button_active');
                 catalogTitle.textContent = item.textContent;
-                cb(item.dataset.category);
+                renderListProduct(item.dataset.category);
             } else {
                 item.classList.remove('navigation__button_active');
             }

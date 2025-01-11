@@ -38,6 +38,10 @@
     gap: var(--gap);
 }
 
+.modal-delivery__fieldset_input-hide {
+    visibility: hidden;
+}
+
 .modal-delivery__fieldset_radio {
     flex-direction: column;
     align-items: flex-start;
@@ -57,6 +61,18 @@
     font-size: 10px;
     line-height: 130%;
     color: #000;
+
+    transition: .3s;
+    outline: none;
+}
+
+.modal-delivery__input:hover{
+    border-color: #fdc031;
+}
+
+.modal-delivery__input:active,
+.modal-delivery__input:focus {
+    border-color: #ff8808;
 }
 
 .modal-delivery__input_half {
@@ -178,9 +194,23 @@
         transition: background-size .3s linear;
     }
 
+    .modal-delivery.modal-thank-window {
+        background: url('../img/hamburger.png') 15px center, linear-gradient(to right, #87ef08 50%, #fff 50%);
+        background-size: 320px, auto;
+        /* background-position: 20px center; */
+        background-repeat: no-repeat;
+        transition: background-size .3s linear;
+    }
+
     .modal-delivery:hover {
         /* background: url('../img/pic.svg') 20px center, linear-gradient(to right, #FFAB08 50%, #fff 50%); */
         background-size: 312px, auto;
+        /* background-repeat: no-repeat; */
+    }
+
+    .modal-delivery.modal-thank-window:hover {
+        /* background: url('../img/pic.svg') 20px center, linear-gradient(to right, #FFAB08 50%, #fff 50%); */
+        background-size: 330px, auto;
         /* background-repeat: no-repeat; */
     }
 
@@ -211,4 +241,22 @@
     .modal-delivery__submit {
         font-size: 16px;
     }
+}
+
+
+.modal-delivery.modal-thank-window {
+    min-height: 300px;
+}
+
+.thank-window_wrrap {
+    padding-top: 5px;
+}
+
+.order_description {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.order_price {
+    padding-top: 5px;
 }

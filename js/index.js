@@ -234,7 +234,8 @@ modalDelivery.addEventListener('click', closeModal);
 
 const init = () => {
     renderListProduct();
-    navigationListController(renderListProduct);
+    // navigationListController(renderListProduct);
+    navigationListController();
     cartInit();
 }
 

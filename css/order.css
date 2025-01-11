@@ -12,8 +12,15 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
     border-radius: 12px;
     padding: 16px 10px;
-
+    z-index: 10;
     cursor: pointer;
+
+    transition: .3s;
+}
+
+.order__wrapper:hover {
+    box-shadow: 0px 0px 12px rgba(207, 121, 8, 0.707);
+    transition: .3s;
 }
 
 .order__wrap-title {
@@ -21,6 +28,10 @@
     justify-content: space-between;
     align-items: center;
     outline: none;
+}
+
+.order__wrapper:hover .order__title {
+    color: #FFAB08;
 }
 
 .order__wrap-title:after {
@@ -44,6 +55,8 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
+
+    transition: .3s;
 }
 
 .order__count {
@@ -60,7 +73,7 @@
 }
 
 .order__wrap_list {
-    /* display: none; */
+    display: none;
 }
 
 .order_open .order__wrap_list {
@@ -144,6 +157,8 @@
 .order__submit:disabled {
     background-color: #f9f9f9;
     color: #acacac;
+
+    cursor: no-drop;
 }
 
 @supports not selector(:focus-visible) {
@@ -183,27 +198,43 @@
 
 
 @media (min-width: 768px) {
-    .order {
-        /* width: 145px; */
+    /* .order {
         width: 300px;
+        transition: width 0.1s ease-in-out;
+    } */
+
+    .order__wrapper {
+        width: 145px;
+        /* width: 300px; */
         /* max-width: 300px; */
         transition: width 0.1s ease-in-out;
     }
 
-    .order.order_open {
-        /* width: 300px; */
+    /* .order.order_open {
+        width: 300px;
+    } */
+
+    .order_open .order__wrapper {
+        width: 300px;
     }
 }
 
 @media (min-width: 1024px) {
-    .order {
+    /* .order {
         width: 300px;
-    }
+    } */
 
     .order__wrapper {
+        width: 300px;
+
         position: unset;
         padding: 24px 16px;
+        cursor: default;
     }
+
+    .order__wrapper:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    }    
 
     .order__wrap-title {
         /* margin-bottom: 8px; */
@@ -218,6 +249,10 @@
         font-size: 24px;
     }
 
+    .order__wrapper:hover .order__title {
+        color: inherit;
+    }
+
     .order__count {
         width: 41px;
         height: 20px;
@@ -229,7 +264,7 @@
     }
 
     .order__wrap_list {
-        /* display: block; */
+        display: block;
         margin-bottom: 16px;
     }
 

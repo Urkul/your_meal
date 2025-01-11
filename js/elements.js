@@ -20,3 +20,17 @@ export const countAmount = document.querySelector('.modal-product .count__amount
 export const orderCount = document.querySelector('.order__count');
 export const orderList = document.querySelector('.order__list');
 export const orderTotalAmount = document.querySelector('.order__total-amount');
+
+export const order = document.querySelector('.order');
+export const orderWrapTitle = document.querySelector('.order__wrap-title');
+export const orderSubmit = document.querySelector('.order__submit');
+
+export const modalDeliveryForm = document.querySelector('.modal-delivery__form');
+export const modalDeliveryContainer = document.querySelector('.modal-delivery__container');
+
+export const modalDeliver = document.querySelector('.modal-delivery');
+export const modalThankWindow = document.querySelector('.modal-thank_window');
+export const orderNumber = document.querySelector('.order_number');
+export const orderDescription = document.querySelector('.order_description');
+export const orderPrice = document.querySelector('.order_price');
+

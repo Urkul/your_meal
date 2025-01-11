@@ -16,3 +16,13 @@ export const renderListProduct = async (category = 'burger') => {
     // console.log('listCard: ', listCard);
     catalogList.append(...listCard);
 }
+
+
+// export const renderListProduct = (category = 'burger') => {
+//     catalogList.textContent = '';
+//     getData(`${API_URL}${PREFIX_PRODUCT}?category=${category}`)
+//         .then(listProduct => {
+//             const listCard = listProduct.map(createCardProduct);
+//             catalogList.append(...listCard);        
+//         });
+// }
